@@ -1,0 +1,83 @@
+.output {
+  margin-top: 5px;
+  flex: 1;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-width: 310px;
+  border: 1px solid #2f5bec;
+  background-color: #fff;
+  list-style: none;
+}
+header {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #2f5bec;
+}
+header h1 {
+  color: #fff;
+}
+header > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header > div:last-child p {
+  color: rgb(221, 218, 218);
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 32px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 0 32px 32px;
+}
+main p {
+  font-size: 0.9rem;
+}
+main > section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main > section > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+section > ul > li {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: flex-start;
+}
+main span,
+main h3 {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.responsibility {
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 0 0 16px;
+}
+.skills {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+  font-weight: 500;
+}
+.skills li {
+  display: block;
+}

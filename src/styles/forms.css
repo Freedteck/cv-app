@@ -1,0 +1,61 @@
+.forms {
+  /* width: 500px; */
+  flex-basis: 40%;
+  min-width: 310px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+fieldset {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: none;
+  box-shadow: 0 0 3px #cac8c8;
+  padding: 20px;
+  border-radius: 10px;
+}
+legend {
+  font-weight: 500;
+  font-size: 1.3rem;
+  width: 100%;
+}
+legend > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle {
+  background-color: #2f5bec;
+  border-radius: 10px;
+  width: 30px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+label input,
+label textarea {
+  background-color: transparent;
+  border: 1px solid #cac8c8;
+  border-radius: 5px;
+  padding: 10px;
+}
+input:focus,
+textarea:focus {
+  outline: 1px solid#2f5bec;
+  border-color: #2f5bec;
+}
+textarea {
+  resize: none;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+[type="button"] {
+  background-color: #f84b2c;
+}

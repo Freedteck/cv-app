@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #000;
+}
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 32px 0;
+  background-color: #f4f7fa;
+  min-height: 100vh;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.3rem;
+  color: #2f5bec;
+  font-weight: 400;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.container > h1 {
+  text-align: center;
+}
