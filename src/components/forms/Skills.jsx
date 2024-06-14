@@ -1,15 +1,32 @@
-const Skills = ({ handleAddSkill, skill, setSkill, isOpen, handleToggle }) => {
+const Skills = ({
+  handleAddSkill,
+  skill,
+  setSkill,
+  isOpen,
+  handleToggle,
+  handleEdit,
+}) => {
   return (
     <fieldset>
       <legend>
         <div>
           <p>Skills</p>
-          <img
-            src={isOpen ? "/chevron-up.svg" : "/chevron-down.svg"}
-            alt="toggle-button"
-            className="toggle"
-            onClick={handleToggle}
-          />
+          <div className="icons">
+            {isOpen && (
+              <img
+                src="/pencil.svg"
+                alt="toggle-button"
+                className="edit sks"
+                onClick={handleEdit}
+              />
+            )}
+            <img
+              src={isOpen ? "/chevron-up.svg" : "/chevron-down.svg"}
+              alt="toggle-button"
+              className="toggle"
+              onClick={handleToggle}
+            />
+          </div>
         </div>
       </legend>
       {isOpen && (

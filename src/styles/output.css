@@ -6,7 +6,7 @@
   flex-direction: column;
   gap: 32px;
   min-width: 310px;
-  border: 1px solid #2f5bec;
+  border: 1px solid #213547;
   background-color: #fff;
   list-style: none;
 }
@@ -15,7 +15,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background-color: #2f5bec;
+  background-color: #213547;
 }
 header h1 {
   color: #fff;
@@ -24,11 +24,16 @@ header > div:last-child {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 header > div:last-child p {
   color: rgb(221, 218, 218);
 }
-
+header .contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .summary {
   display: flex;
   flex-direction: column;
@@ -56,14 +61,17 @@ main > section > ul {
 }
 section > ul > li {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 100px;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 48px;
   align-items: flex-start;
 }
 main span,
 main h3 {
-  font-weight: 500;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.details {
+  font-size: 0.8rem;
 }
 .responsibility {
   list-style-type: disc;

@@ -4,18 +4,29 @@ const Experience = ({
   isOpen,
   handleAddExp,
   handleToggle,
+  handleEdit,
 }) => {
   return (
     <fieldset>
       <legend>
         <div>
           <p>Experence</p>
-          <img
-            src={isOpen ? "/chevron-up.svg" : "/chevron-down.svg"}
-            alt="toggle-button"
-            className="toggle"
-            onClick={handleToggle}
-          />
+          <div className="icons">
+            {isOpen && (
+              <img
+                src="/pencil.svg"
+                alt="toggle-button"
+                className="edit exp"
+                onClick={handleEdit}
+              />
+            )}
+            <img
+              src={isOpen ? "/chevron-up.svg" : "/chevron-down.svg"}
+              alt="toggle-button"
+              className="toggle"
+              onClick={handleToggle}
+            />
+          </div>
         </div>
       </legend>
       {isOpen && (
@@ -64,21 +75,47 @@ const Experience = ({
 
           <label>
             Responsibility
-            <input
-              type="text"
+            <textarea
               name="job-description"
+              rows={2}
+              cols={30}
               required
               placeholder="Your main responsibilities of the job"
               value={experience.responsibility}
               onChange={(e) =>
                 setExperience({
                   ...experience,
-                  responsibility: e.target.value.split(","),
+                  responsibility: e.target.value,
                 })
               }
-            />
+            ></textarea>
           </label>
-
+          <div className="dates">
+            <label>
+              From
+              <input
+                type="date"
+                name="from"
+                required
+                value={experience.from}
+                onChange={(e) =>
+                  setExperience({ ...experience, from: e.target.value })
+                }
+              />
+            </label>
+            <label>
+              To
+              <input
+                type="date"
+                name="to"
+                required
+                value={experience.to}
+                onChange={(e) =>
+                  setExperience({ ...experience, to: e.target.value })
+                }
+              />
+            </label>
+          </div>
           <div className="btn">
             <button onClick={handleAddExp}>Add</button>
           </div>

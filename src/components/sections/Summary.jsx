@@ -2,7 +2,7 @@ const Summary = ({ bio }) => {
   return (
     <section className="summary">
       <h2>Summary</h2>
-      <p>{bio}</p>
+      <p className="details">{bio}</p>
     </section>
   );
 };

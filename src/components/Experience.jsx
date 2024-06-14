@@ -1,3 +1,5 @@
+import { format } from "date-fns";
+
 const Experience = ({ experiences }) => {
   return (
     <section>
@@ -7,15 +9,19 @@ const Experience = ({ experiences }) => {
           <li key={`${exp.title[0]}${index}${exp.title[1]}`}>
             <div className="title">
               <h3>{exp.title}</h3>
-              <p>{exp.date}</p>
+              <p className="details">
+                {format(exp.from, "MMMM yyyy")} - {format(exp.to, "MMMM yyyy")}
+              </p>
             </div>
             <div>
-              <p>
-                <span>{exp.company}</span>
+              <p className="details">
+                <span>{exp.company}</span> | {exp.location}
               </p>
               <ul className="responsibility">
-                {exp.responsibility.map((resp) => (
-                  <li key={resp}>{resp}</li>
+                {exp.responsibility.split("\n").map((resp) => (
+                  <li className="details" key={resp}>
+                    {resp}
+                  </li>
                 ))}
               </ul>
             </div>

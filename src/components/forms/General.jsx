@@ -1,15 +1,32 @@
-const General = ({ personal, setPersonal, isOpen, handleToggle }) => {
+const General = ({
+  personal,
+  setPersonal,
+  isOpen,
+  handleToggle,
+  handleEdit,
+  handleAddPersonal,
+}) => {
   return (
     <fieldset>
       <legend>
         <div>
           <p>General</p>
-          <img
-            src={isOpen ? "/chevron-up.svg" : "/chevron-down.svg"}
-            alt="toggle-button"
-            className="toggle"
-            onClick={handleToggle}
-          />
+          <div className="icons">
+            {isOpen && (
+              <img
+                src="/pencil.svg"
+                alt="toggle-button"
+                className="edit gen"
+                onClick={handleEdit}
+              />
+            )}
+            <img
+              src={isOpen ? "/chevron-up.svg" : "/chevron-down.svg"}
+              alt="toggle-button"
+              className="toggle"
+              onClick={handleToggle}
+            />
+          </div>
         </div>
       </legend>
       {isOpen && (
@@ -72,7 +89,7 @@ const General = ({ personal, setPersonal, isOpen, handleToggle }) => {
           </label>
 
           <div className="btn">
-            <button>Add</button>
+            <button onClick={handleAddPersonal}>Add</button>
           </div>
         </>
       )}
