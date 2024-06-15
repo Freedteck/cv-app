@@ -9,7 +9,7 @@ import Skills from "./forms/Skills";
 
 const CV = () => {
   const [edited, setEdited] = useState(false);
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0);
   const [personal, setPersonal] = useState({
     name: "",
     email: "",
